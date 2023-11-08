@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run: 
         name: Build docker container for each microservices
-          command: |
+          command: 
             echo "--------- The images is Building ------------"
 
             docker build -t udavid-backend ./frontend
