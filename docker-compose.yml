@@ -2,13 +2,13 @@ version: '3'
 
 services:
   frontend:
-    build: frontend
+    image: psybinh/udavid-frontend
     ports:
       - 8501:8501
     depends_on:
       - backend
   
   backend:
-    build: backend
+    image: psybinh/udavid-backend
     ports:
       - 8080:8080
