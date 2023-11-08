@@ -15,7 +15,8 @@ STYLES = {
 }
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
-st.title('Udavid - Object detection')
+# st.title('Udavid - Object detection')
+st.title('Udavid - Semantic segmentation')
 image = st.file_uploader('Choose an image (Support: png, jpg, jpeg)', type=['png', 'jpg', 'jpeg'])
 style = st.selectbox('Choose the model', [i for i in STYLES.keys()])
 
