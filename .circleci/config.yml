@@ -17,12 +17,16 @@ jobs:
             docker build -t udavid-backend ./backend
             docker tag udavid-backend psybinh/udavid-backend
 
+            docker build -t udavid-nginx ./nginx
+            docker tag udavid-nginx psybinh/udavid-nginx
+
             docker login -u psybinh -p $DOCKERPASS
 
             echo "-------------- Pushing images to dockerhub-------"
 
             docker push psybinh/udavid-frontend
             docker push psybinh/udavid-backend
+            docker push psybinh/udavid-nginx
 
 # Orchestrate our job run sequence
 workflows:

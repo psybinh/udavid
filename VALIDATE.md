@@ -13,38 +13,49 @@ frontent Dockerfile: https://github.com/psybinh/udavid/blob/master/frontend/Dock
 backend Dockerfile: https://github.com/psybinh/udavid/blob/master/backend/Dockerfile
 
 Docker hub screenshot:
+
 ![](./images/docker_hub.png "Docker hub screenshot")
 
 `docker-compose.yml` file: https://github.com/psybinh/udavid/blob/master/docker-compose.yml
 
 `docker-compose up` screenshot on the local:
+
 ![](./images/docker_compose.png "docker-compose up")
 
 Website screenshots:
+
 ![](./images/website_local.png "Website screenshots")
 
 # Deployment
 
-<!-- `kubectl get deployments` screenshot: -->
+`kubectl get deployments` screenshot:
 
-<!-- `kubectl get pods` screenshot: -->
+![](./images/get_deployment.png "Website screenshots")
 
-<!-- `kubectl get services` screenshot: -->
+`kubectl get pods` screenshot:
 
-<!-- Website URL: -->
+![](./images/get_pods.png "Website screenshots")
 
-<!-- Website screenshots: -->
+`kubectl get services` screenshot:
 
-<!-- Add Yolo model `yolov7-tiny_736x1280.onnx` to S3 -->
+![](./images/get_services.png "Website screenshots")
 
-<!-- Edit backend Dockerfile:  -->
+Website URL: http://a6e792be6667d4288a923e90caba9694-530918475.us-east-1.elb.amazonaws.com:8501
 
-<!-- Edit fronend code:  -->
+Website screenshots:
 
-<!-- Edit backend code: -->
+![](./images/web_eks_1.png "Website screenshots")
 
-<!-- Re-build fronend docker: -->
+![](./images/web_eks_2.png "Website screenshots")
 
-<!-- Re-build backend docker: -->
+Edit title of the website
 
-<!-- CloudWatch screenshot: -->
+![](./images/edit_title.png "Website screenshots")
+
+Re-deploy:
+
+![](./images/re_deploy.png "Website screenshots")
+
+Result after deploy:
+
+![](./images/re_deploy_rs.png "Website screenshots")
