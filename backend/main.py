@@ -8,6 +8,7 @@ from PIL import Image
 import cv2
 import uvicorn
 from fastapi import File, FastAPI, UploadFile
+import json
 
 import config
 import inference
@@ -28,11 +29,9 @@ def get_image(style: str, file: UploadFile = File(...)):
     image = np.array(Image.open(file.file))
     image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
 
-    output = inference.inference_image(detector, image)
-    image_path = f"/storage/{str(uuid.uuid4())}.jpg"
-    cv2.imwrite(image_path, output)
+    boxes, scores, class_ids = inference.inference_image(detector, image)
 
-    return {"name": image_path, "size": "{0} x {1}".format(*image.shape[:2])}
+    return {"size": "{0} x {1}".format(*image.shape[:2]), "boxes": json.dumps(boxes.tolist()), "scores": json.dumps(scores.tolist()), "class_ids": json.dumps(class_ids.tolist())}
 
 if __name__ == '__main__':
     uvicorn.run('main:app', host='0.0.0.0', port=8080)
