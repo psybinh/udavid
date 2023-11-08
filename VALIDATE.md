@@ -21,7 +21,7 @@ Docker hub screenshot:
 ![](./images/docker_compose.png "docker-compose up")
 
 Website screenshots:
-![](./images/docker_hub.png "Website screenshots")
+![](./images/website_local.png "Website screenshots")
 
 # Deployment
 
