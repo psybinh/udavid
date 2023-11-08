@@ -7,22 +7,22 @@ jobs:
     steps:
       - checkout
       - run: 
-        name: Build docker container for each microservices
-        command: |
-          echo "--------- The images is Building ------------"
+          name: Build docker container for each microservices
+          command: |
+            echo "--------- The images is Building ------------"
 
-          docker build -t udavid-backend ./frontend
-          docker tag udavid-backend psybinh/udavid-frontend
+            docker build -t udavid-backend ./frontend
+            docker tag udavid-backend psybinh/udavid-frontend
 
-          docker build -t udavid-backend ./backend
-          docker tag udavid-backend psybinh/udavid-backend
+            docker build -t udavid-backend ./backend
+            docker tag udavid-backend psybinh/udavid-backend
 
-          docker login -u psybinh -p $DOCKERPASS
+            docker login -u psybinh -p $DOCKERPASS
 
-          echo "-------------- Pushing images to dockerhub-------"
+            echo "-------------- Pushing images to dockerhub-------"
 
-          docker push psybinh/udavid-frontend
-          docker push psybinh/udavid-backend
+            docker push psybinh/udavid-frontend
+            docker push psybinh/udavid-backend
 
 # Orchestrate our job run sequence
 workflows:
