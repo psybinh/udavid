@@ -1,8 +1,28 @@
-## Udavid 
+# Udavid 
 
+### Overall
 
+Object detection web app
 
-### Reference
+### Compornents
+
+- Frontend service:
+- Backend service:
+
+### Setup and run on local
+
+- Run `docker-compose up`
+- Access to the page `localhost:8501` to use the app
+
+![](./images/local_website.png "Website screenshots")
+
+### Setup and run on AWS EKS
+- Step 1: Create cluster
+- Step 2: Deploy the app
+- Step 3: Create router
+- Step 4: Use the web app
+
+# Reference
 - [Object detection web](https://github.com/yeha98555/object-detection-web-app.git)
 - Object detection 
     - [OpenCV-dnn](https://github.com/hpc203/yolov7-opencv-onnxrun-cpp-py)
