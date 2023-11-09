@@ -5,10 +5,10 @@ kubectl apply -f frontend-deployment.yaml
 kubectl apply -f backend-service.yaml
 kubectl apply -f frontend-service.yaml
 
-kubectl expose deployment udavid-frontend --type=LoadBalancer --name=publicfrontend
+kubectl expose deployment frontend --type=LoadBalancer --name=publicfrontend
 
 kubectl get services
 
 # delete all
-kubectl delete deployments udavid-backend udavid-frontend
-kubectl delete services udavid-backend udavid-frontend publicfrontend
+kubectl delete deployments backend frontend
+kubectl delete services backend frontend publicfrontend
