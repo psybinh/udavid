@@ -17,8 +17,11 @@ README: https://github.com/psybinh/udavid/blob/master/README.md
 Deployment and service files are auto generated from docker-compose.yml using the tool `kompose`
 
 Fontend deployment: https://github.com/psybinh/udavid/blob/master/deploy_eks/frontend-deployment.yaml
+
 Backend deployment: https://github.com/psybinh/udavid/blob/master/deploy_eks/backend-deployment.yaml
+
 Fontend service: https://github.com/psybinh/udavid/blob/master/deploy_eks/frontend-service.yaml
+
 Backend service: https://github.com/psybinh/udavid/blob/master/deploy_eks/backend-service.yaml
 
 # Container
