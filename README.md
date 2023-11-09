@@ -1,5 +1,7 @@
 # Udavid 
 
+Note for revewer: Please see https://github.com/psybinh/udavid/blob/master/VALIDATE.md
+
 ### Overall
 
 Object detection web app
